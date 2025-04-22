@@ -6,15 +6,74 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="centered-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Test Components</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card class="section-card">
+    <h1 class="section-title">ION CHIP</h1>
+    <div class="chip-container">
+      <ion-chip class="chip">Default</ion-chip>
+      <ion-chip class="chip" [disabled]="true">Disabled</ion-chip>
+      <ion-chip class="chip" [outline]="true">Outline</ion-chip>
+    </div>
+  </ion-card>
+
+  <ion-card class="section-card">
+    <h1 class="section-title">DATATIME</h1>
+    <div>
+      <ion-datetime class="datetime"></ion-datetime>
+    </div>
+  </ion-card>
+
+  <ion-card class="section-card">
+    <h1 class="section-title">CHECKBOX</h1>
+    <div>
+      <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
+    </div>
+  </ion-card>
+
+  <ion-card class="section-card">
+    <h1 class="section-title">ION RADIO</h1>
+    <div>
+      <ion-radio-group value="strawberries">
+        <ion-radio value="grapes">Grapes</ion-radio><br />
+        <ion-radio value="strawberries">Strawberries</ion-radio><br />
+        <ion-radio value="pineapple">Pineapple</ion-radio><br />
+        <ion-radio value="cherries">Cherries</ion-radio>
+      </ion-radio-group>
+    </div>
+  </ion-card>
+
+  <ion-card class="section-card">
+    <h1 class="section-title">ION TOAST</h1>
+      <ion-button id="open-toast" expand="block" color="success">Mostrar</ion-button>
+      <p id="message">Dale Click y conoce el mensaje oculto.</p>
+      <ion-toast trigger="open-toast" message="Mensaje Flash, mi primer APP Móvil" [duration]="5000"></ion-toast>
+  </ion-card>
+  <ion-card>
+    <h1 class="section-title">ION PICKER</h1>
+    <ion-picker>
+      <ion-picker-column value="javascript">
+        <ion-picker-column-option value="" disabled="true">--</ion-picker-column-option>
+        <ion-picker-column-option value="javascript">Javascript</ion-picker-column-option>
+        <ion-picker-column-option value="typescript">Typescript</ion-picker-column-option>
+        <ion-picker-column-option value="rust">Rust</ion-picker-column-option>
+        <ion-picker-column-option value="c#">C#</ion-picker-column-option>
+      </ion-picker-column>
+    </ion-picker>
+  </ion-card>
+
+  <ion-card>
+    <h1 class="section-title">ION TOOGLE</h1>
+    <ion-toggle>Default Toggle</ion-toggle><br /><br />
+    <ion-toggle [checked]="true">Checked Toggle</ion-toggle><br /><br />
+    <ion-toggle [disabled]="true">Disabled Toggle</ion-toggle><br /><br />
+    <ion-toggle [checked]="true" [disabled]="true">Disabled Checked Toggle</ion-toggle>
+    <br>
+  </ion-card>
+
 </ion-content>
