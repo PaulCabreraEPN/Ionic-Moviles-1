@@ -1,0 +1,7 @@
+{
+  "name": "appComomponents",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
